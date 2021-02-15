@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<style>
+.main{
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 20px;
+    margin-left: 500px;
+    margin-right: 500px;
+    background-color: cornflowerblue;
+}
+input{
+    height: 30px;
+}
+button{
+    height: 30px;
+    width: 50px;
+    border-radius: 20px;
+}
+</style>
+<div class="main">
+
+    <form action="#">
+        <input type="number" id="number" placeholder="check roll">
+        
+        <button onclick=" add()" id="gen">add</button>
+    </form>
+    
+    <p id="result"></p>
+    
+    
+    <button onclick="check()">check</button>
+    
+    <h4>even</h4>
+    <p id="even"></p>
+    
+    
+    <h4>odd</h4>
+    <p id="odd"></p>
+    
+    
+    
+    </div>
+    <script>
+
+        let arr = [];
+        let even = [];
+        let odd = [];
+
+        function add() {
+            var number = parseInt(document.getElementById("number").value);
+            arr.push(number);
+            document.getElementById("result").innerHTML = arr;
+            document.getElementById("").value = "";
+        }
+        function check() {
+            for (var i = 0; i <= arr.length; i++) {
+                if (arr[i] % 2 === 0) {
+                    even.push(arr[i]);
+                    document.getElementById("even").innerHTML = even;
+                }
+                else {
+                    odd.push(arr[i]);
+                    document.getElementById("odd").innerText = odd;
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
